@@ -1,0 +1,19 @@
+{
+  "name": "prisma6",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "db:migrate": "prisma-schema-fixer && prisma migrate dev && prisma generate && npm run db:deploy",
+    "db:reset": "prisma migrate reset --skip-generate",
+    "db:deploy": "prisma migrate deploy"
+  },
+  "packageManager": "pnpm@10.23.0",
+  "devDependencies": {
+    "@onozaty/prisma-db-comments-generator": "^1.4.0",
+    "@onozaty/prisma-schema-fixer": "^1.1.1",
+    "prisma": "^6.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0"
+  }
+}
